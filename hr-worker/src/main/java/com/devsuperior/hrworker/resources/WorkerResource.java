@@ -44,6 +44,7 @@ public class WorkerResource {
 
 	
 	
+	
 	// responseEntity encapsula uma resposta http na saida
 	@GetMapping
 	public ResponseEntity<List<Worker>> findAll() {
