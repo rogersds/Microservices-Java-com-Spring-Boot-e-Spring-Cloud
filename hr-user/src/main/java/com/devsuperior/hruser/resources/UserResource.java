@@ -14,16 +14,16 @@ import com.devsuperior.hruser.repositories.UserRepository;
 @RestController
 @RequestMapping(value = "/users")
 public class UserResource {
-	
+
 	@Autowired
 	private UserRepository repository;
-	
+
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
 		User obj = repository.findById(id).get();
 		return ResponseEntity.ok(obj);
-	}	
-	
+	}
+
 	@GetMapping(value = "/search")
 	public ResponseEntity<User> findByEmail(@RequestParam String email) {
 		User obj = repository.findByEmail(email);
